@@ -1,0 +1,13 @@
+p, h1, h2, h3 {
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+* {
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+html, body {
+  background-color: antiquewhite;
+}
