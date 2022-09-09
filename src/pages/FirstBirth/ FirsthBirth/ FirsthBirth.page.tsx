@@ -1,8 +1,27 @@
 import * as C from "./firsthBirth.styles";
+import photo1 from "./assets/photo1.jpeg";
+import photo2 from "./assets/photo2.jpeg";
+import { Photo } from "../../../components";
+import music from "./assets/partilhar.mp3";
+import { Howl } from "howler";
+import { useEffect } from "react";
+
+var sound = new Howl({
+  src: [music],
+});
 
 export const FirsthBirth = () => {
+  useEffect(() => {
+    sound.play();
+  }, []);
+
   return (
     <C.Container>
+      <div style={{ display: "flex", marginBottom: 32 }}>
+        <Photo src={photo1} rotate={-10} />
+        <Photo src={photo2} rotate={10} />
+      </div>
+
       <C.Title variant="title">
         Feliz 43830 Minutos de namoro amor! 💛💙
       </C.Title>
@@ -74,8 +93,8 @@ export const FirsthBirth = () => {
         mas também não sou tão fofo assim.
         <br />
         <br />
-        Enfim meu amor... não AMOR da minha vida! É por meio desse recadinho,
-        quero que saiba que EU TE AMO e amoo muitooo e que pode contar comigo
+        Enfim meu amor... não, AMOR da minha vida! É por meio desse recadinho,
+        quero que saiba que EU TE AMO e quero PARTILHAR A VIDA BOA COM VOCÊ, você pode contar comigo
         para todos os momentos da sua vida!
         <br />
         <br />

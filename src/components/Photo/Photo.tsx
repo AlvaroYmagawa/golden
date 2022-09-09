@@ -1,9 +1,14 @@
 import { PhotoProps } from "./photo.interfaces";
 import { Container, Image } from "./photo.styles";
 
-export function Photo({ src, imagePosition = 'center', ...rest }: PhotoProps) {
+export function Photo({
+  src,
+  imagePosition = "center",
+  rotate = 0,
+  ...rest
+}: PhotoProps) {
   return (
-    <Container {...rest}>
+    <Container rotate={rotate} {...rest}>
       <Image src={src} imagePosition={imagePosition} />
     </Container>
   );
